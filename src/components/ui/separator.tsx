@@ -1,12 +1,12 @@
 "use client"
 
 import * as React from "react"
-import { Separator as SeparatorPrimitive } from "radix-ui"
+import {Separator as SeparatorPrimitive} from "radix-ui"
 
-import { cn } from "@/src/lib/utils"
+import {cn} from "@/src/lib/utils"
 
 function Separator({
-                       className,
+                       className = "bg-white",
                        orientation = "horizontal",
                        decorative = true,
                        ...props
@@ -25,4 +25,4 @@ function Separator({
     )
 }
 
-export { Separator }
+export {Separator}

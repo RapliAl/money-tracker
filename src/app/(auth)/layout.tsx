@@ -1,38 +1,20 @@
-import type {Metadata} from "next";
-import "./globals.css";
-import {ThemeProvider} from "next-themes";
 import {DarkModeToggle} from "@/src/components/common/darkmode-toggle";
+import React from "react";
+import {Coffee} from "lucide-react";
 
-type RootLayoutProps = {
-    children: React.ReactNode
+type AuthLayoutProps = {
+    children: React.ReactNode;
 }
 
-export const metadata: Metadata = {
-    title: "Money Tracker",
-    description: "Made By Raplial",
-};
-
-export default function RootLayout({children}: RootLayoutProps) {
+export default function AuthLayout({children}: AuthLayoutProps) {
     return (
-        <>
-            <DarkModeToggle/>
-            <html lang="en" suppressHydrationWarning>
-            <head title="Darkmode">
-                <title>
-                    Money Tracker
-                </title>
-            </head>
-            <body>
-            <ThemeProvider
-                attribute="class"
-                defaultTheme="system"
-                enableSystem
-                disableTransitionOnChange
-            >
+        <div className="relative bg-muted flex min-h-svh flex-col items-center justify-center gap-6 p-6 md:p-10">
+            <div className="absolute top-4 right-4">
+                <DarkModeToggle/>
+            </div>
+            <div className="flex w-full max-w-sm flex-col gap-6">
                 {children}
-            </ThemeProvider>
-            </body>
-            </html>
-        </>
+            </div>
+        </div>
     )
 }

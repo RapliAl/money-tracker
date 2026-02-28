@@ -27,6 +27,7 @@
     "sheet": "^0.2.0",
     "sidebar": "^1.0.2",
     "skeleton": "^1.0.1",
+    "sonner": "^2.0.7",
     "tailwind-merge": "^3.5.0",
     "tooltip": "^1.6.1",
     "zod": "^4.3.6"
