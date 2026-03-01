@@ -51,12 +51,9 @@ export default function Login() {
             toast.error("Login Failed", {
                 description: loginState.errors?._form?.[0]
             });
-            startTransition(() => {
-                loginAction(null);
-            });
         }
 
-    }, [loginAction, loginState]);
+    }, [loginState]);
     return (
         <Card>
             <CardHeader>
@@ -86,14 +83,13 @@ export default function Login() {
                             label="Password"
                             placeholder="Please Enter Your Password"
                         />
+                        <div className="flex flex-col gap-10">
+                            <Button type="submit"
+                                    className=" text-center col-span-2 dark:hover:bg-teal-500 hover:bg-teal-500 ">
+                                {isPendingLogin ? <Loader2 className="animate-spin"/> : "Login"}
+                            </Button>
+                        </div>
                     </form>
-                    <div className="flex flex-col gap-10">
-                        <Separator/>
-                        <Button type="submit"
-                                className="text-center col-span-2 dark:hover:bg-teal-500 hover:bg-teal-500 ">
-                            {isPendingLogin ? <Loader2 className="animate-spin"/> : "Login"}
-                        </Button>
-                    </div>
                 </Form>
             </CardContent>
         </Card>

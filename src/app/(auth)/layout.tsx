@@ -1,6 +1,5 @@
 import {DarkModeToggle} from "@/components/common/darkmode-toggle";
 import React from "react";
-import {Coffee} from "lucide-react";
 
 type AuthLayoutProps = {
     children: React.ReactNode;

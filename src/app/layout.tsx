@@ -1,6 +1,7 @@
 import type {Metadata} from "next";
 import "./globals.css";
 import {ThemeProvider} from "next-themes";
+import {Toaster} from "sonner";
 
 type RootLayoutProps = {
     children: React.ReactNode
@@ -24,6 +25,7 @@ export default function RootLayout({children}: RootLayoutProps) {
                 disableTransitionOnChange
             >
                 {children}
+                <Toaster/>
             </ThemeProvider>
             </body>
             </html>

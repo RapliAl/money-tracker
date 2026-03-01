@@ -1,9 +1,11 @@
+"use server"
+
 import {AuthFormState} from "@/types/auth";
 import {INITIAL_STATE_LOGIN_FORM} from "@/constants/auth-constants";
 import {loginSchema} from "@/validation/auth";
 import {createClient} from "@/lib/supabase/server";
-import {cookies} from "next/dist/server/request/cookies";
-import {revalidatePath} from "next/dist/server/web/spec-extension/revalidate";
+import {cookies} from "next/headers";
+import {revalidatePath} from "next/cache";
 import {redirect} from "next/navigation"
 
 export async function login(
@@ -43,7 +45,7 @@ export async function login(
         }
     }
 
-    const {data: {profile}} = await supabase
+    const {data: profile} = await supabase
         .from("profiles")
         .select("*")
         .eq("id", user?.id)
