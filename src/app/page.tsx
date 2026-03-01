@@ -1,6 +1,6 @@
-import {Button} from "@/src/components/ui/button";
+import {Button} from "@/components/ui/button";
 import Link from "next/dist/client/link";
-import {DarkModeToggle} from "@/src/components/common/darkmode-toggle";
+import {DarkModeToggle} from "@/components/common/darkmode-toggle";
 
 export default function Home() {
     return (

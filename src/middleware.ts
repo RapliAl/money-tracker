@@ -1,7 +1,7 @@
-import {NextRequest} from "next/dist/server/web/spec-extension/request";
-import {updateSession} from "@/src/lib/supabase/proxy";
+import {NextRequest} from "next/server";
+import {updateSession} from "@/lib/supabase/middleware";
 
-export async function proxy(request: NextRequest) {
+export async function middleware(request: NextRequest) {
 
     return await updateSession(request)
 }

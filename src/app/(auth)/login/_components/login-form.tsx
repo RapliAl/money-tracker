@@ -1,11 +1,11 @@
 "use client"
 
-import {loginSchema, LoginSchema} from "@/src/validation/auth";
+import {loginSchema, LoginSchema} from "@/validation/auth";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod"
 import {startTransition, useActionState, useEffect} from "react";
-import {login} from "@/src/app/(auth)/action";
-import {INITIAL_STATE_LOGIN_FORM} from "@/src/constants/auth-constants";
+import {login} from "@/app/(auth)/action";
+import {INITIAL_STATE_LOGIN_FORM} from "@/constants/auth-constants";
 import {
     Card,
     CardAction,
@@ -14,13 +14,13 @@ import {
     CardFooter,
     CardHeader,
     CardTitle
-} from "@/src/components/ui/card";
+} from "@/components/ui/card";
 import {toast} from "sonner";
-import {Form} from "@/src/components/ui/form";
-import FormInput from "@/src/components/common/form-input";
-import {Button} from "@/src/components/ui/button";
+import {Form} from "@/components/ui/form";
+import FormInput from "@/components/common/form-input";
+import {Button} from "@/components/ui/button";
 import {Loader2} from "lucide-react";
-import {Separator} from "@/src/components/ui/separator";
+import {Separator} from "@/components/ui/separator";
 
 export default function Login() {
     const form = useForm<LoginSchema>({
@@ -89,7 +89,8 @@ export default function Login() {
                     </form>
                     <div className="flex flex-col gap-10">
                         <Separator/>
-                        <Button type="submit" className="text-center col-span-2 hover:bg-amber-50">
+                        <Button type="submit"
+                                className="text-center col-span-2 dark:hover:bg-teal-500 hover:bg-teal-500 ">
                             {isPendingLogin ? <Loader2 className="animate-spin"/> : "Login"}
                         </Button>
                     </div>

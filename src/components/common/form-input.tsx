@@ -1,7 +1,7 @@
 import {FieldValues, Path, UseFormReturn} from "react-hook-form";
-import {FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/src/components/ui/form";
-import {Input} from "@/src/components/ui/input";
-import {Textarea} from "@/src/components/ui/textarea";
+import {FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
+import {Input} from "@/components/ui/input";
+import {Textarea} from "@/components/ui/textarea";
 
 
 export default function FormInput<T extends FieldValues>(

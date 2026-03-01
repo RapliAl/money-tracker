@@ -1,4 +1,4 @@
-import {DarkModeToggle} from "@/src/components/common/darkmode-toggle";
+import {DarkModeToggle} from "@/components/common/darkmode-toggle";
 import React from "react";
 import {Coffee} from "lucide-react";
 
