@@ -24,25 +24,25 @@
     ],
     "paths": {
       "@/*": [
-        "src/*"
+        "./src/*"
       ],
       "@components/*": [
-        "components/*"
+        "./src/components/*"
       ],
       "@lib/*": [
-        "lib/*"
+        "./src/lib/*"
       ],
       "@hooks/*": [
-        "hooks/*"
+        "./src/hooks/*"
       ],
       "@validation/*": [
-        "validation/*"
+        "./src/validation/*"
       ],
       "@provider/*": [
-        "provider/*"
+        "./src/provider/*"
       ],
       "@constants/*": [
-        "constants/*"
+        "./src/constants/*"
       ]
     }
   },
