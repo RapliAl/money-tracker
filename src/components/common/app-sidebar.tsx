@@ -50,12 +50,10 @@ export default function AppSidebar() {
                                         <SidebarMenuButton
                                             asChild
                                             tooltip={item.title}
-                                            isActive={path === item.href}
-                                            className={cn("px-4 py-3 h-auto bg-transparent", {
-                                                "bg-green-400 text-white hover:bg-green-500 hover:text-white": path === item.href,
-                                            })}
                                         >
-                                            <a href={item.href}>
+                                            <a href={item.href} className={cn("px-4 py-3 h-auto", {
+                                                "bg-green-400 text-white hover:bg-green-500 hover:text-white": path === item.href,
+                                            })}>
                                                 {item.icon && <item.icon />}
                                                 <span>{item.title}</span>
                                             </a>

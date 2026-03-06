@@ -4,17 +4,19 @@ export const SIDEBAR_LIST = [
     {
         title: "Dashboard",
         href: "/dashboard",
-        icon: ChartNoAxesCombined
+        icon: ChartNoAxesCombined,
     },
     {
         title: "Pengeluaran",
         href: "/dashboard/pengeluaran",
-        icon: TrendingDown
+        icon: TrendingDown,
+        color: "red"
     },
     {
         title: "Pemasukan",
         href: "/dashboard/pemasukan",
-        icon: TrendingUp
+        icon: TrendingUp,
+        color: "green"
     },
 ]
 
