@@ -1,4 +1,7 @@
+import AppSidebar from "@/components/common/app-sidebar";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { DarkModeToggle } from "@components/common/darkmode-toggle";
+import { Separator } from "@/components/ui/separator";
 import React from "react";
 
 type DashboardLayoutProps = {
@@ -7,13 +10,20 @@ type DashboardLayoutProps = {
 
 export default function DashboardLayout({ children }: DashboardLayoutProps) {
     return (
-        <div className="relative bg-muted flex min-h-svh flex-col items-center justify-center gap-6 p-6 md:p-10">
-            <div className="absolute top-4 right-4">
-                <DarkModeToggle />
-            </div>
-            <div className="flex w-full max-w-sm flex-col gap-6">
+        <SidebarProvider>
+            <AppSidebar />
+            <header className="flex justify-between h-16 shrink-0 items-center gap-2 transition-[widht, height] ease-linear group-has-data-[collepsible=icon]/sidebar-wrapper:h-12">
+                <div className="flex items-center gap-2 px-4">
+                    <SidebarTrigger className="cursor-pointer" />
+                    <Separator orientation="vertical" className="mr-2 data-[orientation=vertical]:h-4" />
+                </div>
+                <div className="px-4">
+                    <DarkModeToggle />
+                </div>
+            </header>
+            <main className="flex flex-1 flex-col items-start gap-4 p-4 pt-0">
                 {children}
-            </div>
-        </div>
+            </main>
+        </SidebarProvider>
     )
 }

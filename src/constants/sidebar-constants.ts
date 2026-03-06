@@ -1,19 +1,21 @@
-import {TrendingDown, TrendingUp, ChartNoAxesCombined} from "lucide-react"
+import { TrendingDown, TrendingUp, ChartNoAxesCombined } from "lucide-react"
 
 export const SIDEBAR_LIST = [
     {
-        label: "Dashboard",
-        href: "/(main)",
+        title: "Dashboard",
+        href: "/dashboard",
         icon: ChartNoAxesCombined
     },
     {
-        label: "Pengeluaran",
-        href: "/pengeluaran",
+        title: "Pengeluaran",
+        href: "/dashboard/pengeluaran",
         icon: TrendingDown
     },
     {
-        label: "Pemasukan",
-        href: "/pemasukan",
+        title: "Pemasukan",
+        href: "/dashboard/pemasukan",
         icon: TrendingUp
     },
 ]
+
+export type SidebarList = typeof SIDEBAR_LIST[number]
