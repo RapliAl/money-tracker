@@ -16,7 +16,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
                 <header className="flex justify-between h-16 shrink-0 items-center gap-2 transition-[widht, height] ease-linear group-has-data-[collepsible=icon]/sidebar-wrapper:h-12">
                     <div className="flex items-center gap-2 px-4">
                         <SidebarTrigger className="cursor-pointer" />
-                        <Separator orientation="vertical" className="mr-2 data-vertical:h-4 bg-white/20" />
+                        <Separator orientation="vertical" className="mr-2 data-vertical:h-4" />
                     </div>
                     <div className="px-4">
                         <DarkModeToggle />

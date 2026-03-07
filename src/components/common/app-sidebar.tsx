@@ -18,6 +18,7 @@ import { SIDEBAR_LIST } from "@/constants/sidebar-constants";
 import { cn } from "@/lib/utils";
 import { TooltipProvider } from "../ui/tooltip";
 import { Separator } from "@/components/ui/separator";
+import Link from "next/link";
 
 export default function AppSidebar() {
     const { isMobile } = useSidebar()
@@ -31,10 +32,15 @@ export default function AppSidebar() {
                         <SidebarMenuItem>
                             <SidebarMenuButton size="lg" asChild>
                                 <div className="font-semibold text-xl">
-                                    <div className="flex p-2 items-center justify-between rounded-lg">
-                                        <BadgeDollarSign className="size-12" />
-                                    </div>
-                                    Money Tracker
+                                    <Link
+                                        href="/"
+                                        className="flex p-2 items-center justify-center rounded-lg gap-3"
+                                    >
+                                        <div className="">
+                                            <BadgeDollarSign className="size-6" />
+                                        </div>
+                                        Money Tracker
+                                    </Link>
                                 </div>
                             </SidebarMenuButton>
                         </SidebarMenuItem>
@@ -52,7 +58,7 @@ export default function AppSidebar() {
                                             tooltip={item.title}
                                         >
                                             <a href={item.href} className={cn("px-4 py-3 h-auto", {
-                                                "bg-green-400 text-white hover:bg-green-500 hover:text-white": path === item.href,
+                                                "text-white hover:bg-green-500 hover:text-green": path === item.href,
                                             })}>
                                                 {item.icon && <item.icon />}
                                                 <span>{item.title}</span>
