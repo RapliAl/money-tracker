@@ -22,7 +22,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
     return (
         <>
             <html lang="en" suppressHydrationWarning className={bebasNeue.className}>
-                <head title="Darkmode" />
+                <head>
+                    <title>Money Tracker</title>
+                </head>
                 <body>
                     <ThemeProvider
                         attribute="class"
@@ -34,6 +36,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
                         <Toaster />
                     </ThemeProvider>
                 </body>
+                <footer className="fixed bottom-0 left-7 right-0 mb-8">
+                    <p className="text-center justify-center"><i>© 2026 Money Tracker</i>. Made With ❤️ By Raplial.</p>
+                </footer>
             </html>
         </>
     )

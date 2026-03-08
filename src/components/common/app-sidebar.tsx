@@ -9,7 +9,8 @@ import {
     SidebarMenu,
     SidebarMenuButton,
     useSidebar,
-    SidebarGroupContent
+    SidebarGroupContent,
+    SidebarFooter
 } from "../ui/sidebar";
 
 import { usePathname } from "next/navigation";
@@ -70,6 +71,9 @@ export default function AppSidebar() {
                         </SidebarGroupContent>
                     </SidebarGroup>
                 </SidebarContent>
+                <SidebarFooter>
+
+                </SidebarFooter>
             </Sidebar>
         </TooltipProvider>
     )

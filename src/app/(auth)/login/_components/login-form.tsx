@@ -1,11 +1,11 @@
 "use client"
 
-import {loginSchema, LoginSchema} from "@/validation/auth";
-import {useForm} from "react-hook-form";
-import {zodResolver} from "@hookform/resolvers/zod"
-import {startTransition, useActionState, useEffect} from "react";
-import {login} from "@/app/(auth)/action";
-import {INITIAL_STATE_LOGIN_FORM} from "@/constants/auth-constants";
+import { loginSchema, LoginSchema } from "@/validation/auth";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod"
+import { startTransition, useActionState, useEffect } from "react";
+import { login } from "@/app/(auth)/action";
+import { INITIAL_STATE_LOGIN_FORM } from "@/constants/auth-constants";
 import {
     Card,
     CardAction,
@@ -15,12 +15,15 @@ import {
     CardHeader,
     CardTitle
 } from "@/components/ui/card";
-import {toast} from "sonner";
-import {Form} from "@/components/ui/form";
+import { toast } from "sonner";
+import { Form } from "@/components/ui/form";
 import FormInput from "@/components/common/form-input";
-import {Button} from "@/components/ui/button";
-import {Loader2} from "lucide-react";
-import {Separator} from "@/components/ui/separator";
+import { Button } from "@/components/ui/button";
+import { Loader2 } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
+import { BadgeDollarSign } from "lucide-react";
+
+
 
 export default function Login() {
     const form = useForm<LoginSchema>({
@@ -57,9 +60,14 @@ export default function Login() {
     return (
         <Card>
             <CardHeader>
-                <CardTitle className="text-center font-bold text-3xl"> Money Tracker </CardTitle>
+                <CardTitle className="text-center font-bold text-3xl">
+                    <div className="flex justify-center items-center gap-2 mr-4">
+                        <BadgeDollarSign className="size-10 flex" />
+                        Money Tracker
+                    </div>
+                </CardTitle>
                 <div className="bg-amber-50">
-                    <Separator/>
+                    <Separator />
                 </div>
                 <CardTitle>Login</CardTitle>
                 <CardDescription>
@@ -85,8 +93,8 @@ export default function Login() {
                         />
                         <div className="flex flex-col gap-10">
                             <Button type="submit"
-                                    className=" text-center col-span-2 dark:hover:bg-teal-500 hover:bg-teal-500 ">
-                                {isPendingLogin ? <Loader2 className="animate-spin"/> : "Login"}
+                                className=" text-center col-span-2 dark:hover:bg-teal-500 hover:bg-teal-500 ">
+                                {isPendingLogin ? <Loader2 className="animate-spin" /> : "Login"}
                             </Button>
                         </div>
                     </form>
