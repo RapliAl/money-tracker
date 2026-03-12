@@ -22,6 +22,7 @@ import { Button } from "@/components/ui/button";
 import { Loader2 } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { BadgeDollarSign } from "lucide-react";
+import Link from "next/link";
 
 
 
@@ -61,22 +62,20 @@ export default function Login() {
         <Card>
             <CardHeader>
                 <CardTitle className="text-center font-bold text-3xl">
-                    <div className="flex justify-center items-center gap-2 mr-4">
+                    <div className="flex justify-center items-center gap-2 mr-4 font-bebas-neue">
                         <BadgeDollarSign className="size-10 flex" />
                         Money Tracker
                     </div>
                 </CardTitle>
-                <div className="bg-amber-50">
-                    <Separator />
-                </div>
-                <CardTitle>Login</CardTitle>
-                <CardDescription>
+                <Separator />
+                <CardTitle className="font-bebas-neue space-y-4 mt-6">Login</CardTitle>
+                <CardDescription className="font-bebas-neue">
                     Please enter your email and password to log in to your account.
                 </CardDescription>
             </CardHeader>
             <CardContent>
                 <Form {...form}>
-                    <form onSubmit={onSubmit} className="space-y-4">
+                    <form onSubmit={onSubmit} className="space-y-4 font-bebas-neue">
                         <FormInput
                             form={form}
                             type="email"
@@ -93,13 +92,17 @@ export default function Login() {
                         />
                         <div className="flex flex-col gap-10">
                             <Button type="submit"
-                                className=" text-center col-span-2 dark:hover:bg-teal-500 hover:bg-teal-500 ">
+                                className=" text-center col-span-2 dark:hover:bg-teal-500 hover:bg-teal-500 font-bebas-neue">
                                 {isPendingLogin ? <Loader2 className="animate-spin" /> : "Login"}
                             </Button>
                         </div>
                     </form>
                 </Form>
             </CardContent>
+            <Separator />
+            <div className="font-iosevka-charon-light-italic text-center text-sm">
+                <p>Don't have an account? <Link href="/register" className="hover:underline text-bold">Register</Link></p>
+            </div>
         </Card>
     )
 

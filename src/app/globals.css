@@ -122,7 +122,18 @@
   }
 
   body {
+    font-family: system-ui, -apple-system, sans-serif;
     @apply bg-background text-foreground;
+  }
+
+  .font-bebas-neue {
+    font-family: var(--font-bebas-neue);
+  }
+
+  .font-iosevka-charon-light-italic {
+    font-family: "Iosevka Charon", monospace;
+    font-weight: 300;
+    font-style: italic;
   }
 
   input [type="number"]::-webkit-inner-spin-button,

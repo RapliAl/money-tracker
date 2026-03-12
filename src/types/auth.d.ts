@@ -4,6 +4,7 @@ export type AuthFormState = {
         email?: string[],
         password?: string[],
         username?: string[],
+        confirmPassword?: string[],
         _form?: string[],
     }
 }

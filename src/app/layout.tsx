@@ -11,6 +11,7 @@ type RootLayoutProps = {
 const bebasNeue = Bebas_Neue({
     subsets: ["latin"],
     weight: "400",
+    variable: "--font-bebas-neue"
 })
 
 export const metadata: Metadata = {
@@ -21,9 +22,13 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: RootLayoutProps) {
     return (
         <>
-            <html lang="en" suppressHydrationWarning className={bebasNeue.className}>
+            <html
+                lang="en"
+                suppressHydrationWarning
+                className={bebasNeue.variable}
+            >
                 <head>
-                    <title>Money Tracker</title>
+                    <title className="font-bebas-neue">Money Tracker</title>
                 </head>
                 <body>
                     <ThemeProvider
@@ -36,10 +41,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
                         <Toaster />
                     </ThemeProvider>
                 </body>
-                <footer className="fixed bottom-0 left-7 right-0 mb-8">
-                    <p className="text-center justify-center"><i>© 2026 Money Tracker</i>. Made With ❤️ By Raplial.</p>
-                </footer>
             </html>
+            <footer className="fixed bottom-0 left-7 right-0 mb-8 font-bebas-neue">
+                <p className="text-center justify-center"><i>© 2026 Money Tracker</i>. Made With ❤️ By Raplial.</p>
+            </footer>
         </>
     )
 }
