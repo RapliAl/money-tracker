@@ -31,7 +31,7 @@ export default function Home() {
                 <div className="absolute top-4 right-4">
                     <DarkModeToggle />
                 </div>
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center dark:text-white text-white">
                     <h1 className="font-bold items-center font-bebas-neue text-center text-8xl">
                         Kendali Penuh Atas
                         <br />
@@ -44,7 +44,7 @@ export default function Home() {
                         tanpa harus mengorbankan isi tabungan masa depan.
                     </p>
                 </div>
-                <div className="htext-center col-span-2 bg-[#F7E7CE]/50 dark:hover:bg-[#F7E7CE]/70 hover:bg-[#F7E7CE]/50 rounded-lg">
+                <div className="htext-center col-span-2 dark:bg-[#F7E7CE]/50 bg-[#F7E7CE]/50 dark:hover:bg-[#F7E7CE]/70 hover:bg-[#F7E7CE]/50 rounded-lg dark:text-white text-white">
                     <Link href="/dashboard">
                         <Button variant="outline">
                             <p className="font-semibold"> Get Started </p>

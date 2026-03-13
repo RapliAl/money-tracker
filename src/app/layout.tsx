@@ -42,7 +42,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                     </ThemeProvider>
                 </body>
             </html>
-            <footer className="fixed bottom-0 left-7 right-0 mb-8 font-bebas-neue">
+            <footer className="fixed bottom-0 left-7 right-0 mb-8 font-bebas-neue dark:text-white text-white">
                 <p className="text-center justify-center"><i>© 2026 Money Tracker</i>. Made With ❤️ By Raplial.</p>
             </footer>
         </>
