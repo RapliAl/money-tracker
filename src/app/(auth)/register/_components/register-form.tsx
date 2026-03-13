@@ -50,7 +50,7 @@ export default function RegisterForm() {
     }, [registerState])
 
     return (
-        <Card className="bg-deep-green">
+        <Card className="dark:bg-deep-green bg-deep-green">
             <CardHeader>
                 <CardTitle className="text-center font-bold text-3xl">
                     <div className="flex justify-center items-center gap-2 font-bebas-neue text-[#F7E7CE]">
@@ -59,12 +59,12 @@ export default function RegisterForm() {
                     </div>
                 </CardTitle>
                 <Separator />
-                <CardTitle className="font-bebas-neue mt-6 text-xl">Register</CardTitle>
+                <CardTitle className="font-bebas-neue mt-6 text-xl dark:text-white text-white">Register</CardTitle>
                 <CardDescription className="font-bebas-neue mb-3">
                     Please enter your email and password to register for an account.
                 </CardDescription>
             </CardHeader>
-            <CardContent>
+            <CardContent className="dark:text-white text-white">
                 <Form {...form}>
                     <form onSubmit={onSubmit} className="space-y-4 font-bebas-neue">
                         <FormInput
@@ -97,7 +97,7 @@ export default function RegisterForm() {
                         />
                         <div className="flex flex-col gap-10 mt-9">
                             <Button type="submit"
-                                className=" text-center col-span-2 dark:hover:bg-[#F7E7CE] hover:bg-[#F7E7CE] ">
+                                className=" text-center col-span-2 dark:hover:bg-[#F7E7CE]/80 hover:bg-[#F7E7CE]/80 dark:bg-[#F7E7CE] bg-[#F7E7CE] text-black font-bebas-neue">
                                 {isPendingRegister ? <Loader2 className="animate-spin" /> : "Register"}
                             </Button>
                         </div>
@@ -105,7 +105,7 @@ export default function RegisterForm() {
                 </Form>
             </CardContent>
             <Separator />
-            <CardFooter className="justify-center">
+            <CardFooter className="justify-center dark:text-white text-white">
                 <p className="text-center font-iosevka-charon text-sm">
                     Already have an account? <Link href="/login" className="hover:underline hover:text-teal-500 text-bold">Login</Link>
                 </p>

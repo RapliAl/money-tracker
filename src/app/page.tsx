@@ -44,9 +44,9 @@ export default function Home() {
                         tanpa harus mengorbankan isi tabungan masa depan.
                     </p>
                 </div>
-                <div className="htext-center col-span-2 dark:bg-[#F7E7CE]/50 bg-[#F7E7CE]/50 dark:hover:bg-[#F7E7CE]/70 hover:bg-[#F7E7CE]/50 rounded-lg dark:text-white text-white">
+                <div className="text-center col-span-2 dark:bg-[#F7E7CE]/50 bg-[#F7E7CE]/50 dark:hover:bg-[#F7E7CE]/30 hover:bg-[#F7E7CE]/30 rounded-lg">
                     <Link href="/dashboard">
-                        <Button variant="outline">
+                        <Button variant="outline" className="dark:bg-[#F7E7CE]/50 bg-[#F7E7CE]/50 dark:hover:bg-[#F7E7CE]/30 hover:bg-[#F7E7CE]/30 dark:text-white text-white hover:text-white dark:hover:text-white">
                             <p className="font-semibold"> Get Started </p>
                         </Button>
                     </Link>
