@@ -32,15 +32,15 @@ export default function AppSidebar() {
                     <SidebarMenu>
                         <SidebarMenuItem>
                             <SidebarMenuButton size="lg" asChild>
-                                <div className="font-semibold text-xl">
+                                <div className="font-semibold text-xl font-bebas-neue">
                                     <Link
                                         href="/"
                                         className="flex p-2 items-center justify-center rounded-lg gap-3"
                                     >
-                                        <div className="">
-                                            <BadgeDollarSign className="size-6" />
+                                        <div className="flex items-center gap-2">
+                                            <BadgeDollarSign className="size-8" />
+                                            <span className="hidden md:block ml-2 text-2xl">Money Tracker</span>
                                         </div>
-                                        Money Tracker
                                     </Link>
                                 </div>
                             </SidebarMenuButton>
@@ -50,7 +50,7 @@ export default function AppSidebar() {
                 <Separator />
                 <SidebarContent>
                     <SidebarGroup>
-                        <SidebarGroupContent className="flex flex-col">
+                        <SidebarGroupContent className="flex flex-col font-bebas-neue">
                             <SidebarMenu className="gap-2">
                                 {SIDEBAR_LIST?.map((item) => (
                                     <SidebarMenuItem key={item.title}>
@@ -74,7 +74,7 @@ export default function AppSidebar() {
                 <SidebarFooter>
 
                 </SidebarFooter>
-            </Sidebar>
-        </TooltipProvider>
+            </Sidebar >
+        </TooltipProvider >
     )
 }

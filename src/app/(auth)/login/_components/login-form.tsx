@@ -90,7 +90,7 @@ export default function Login() {
                             label="Password"
                             placeholder="Please Enter Your Password"
                         />
-                        <div className="flex flex-col gap-10">
+                        <div className="flex flex-col gap-10 mt-8">
                             <Button type="submit"
                                 className=" text-center col-span-2 dark:hover:bg-teal-500 hover:bg-teal-500 font-bebas-neue">
                                 {isPendingLogin ? <Loader2 className="animate-spin" /> : "Login"}
@@ -100,9 +100,11 @@ export default function Login() {
                 </Form>
             </CardContent>
             <Separator />
-            <div className="font-iosevka-charon-light-italic text-center text-sm">
-                <p>Don't have an account? <Link href="/register" className="hover:underline text-bold">Register</Link></p>
-            </div>
+            <CardFooter className="justify-center">
+                <p className="text-center font-iosevka-charon text-sm">
+                    Don't have an account? <Link href="/register" className="hover:underline text-bold hover:text-teal-500">Register</Link>
+                </p>
+            </CardFooter>
         </Card>
     )
 

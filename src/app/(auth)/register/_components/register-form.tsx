@@ -7,12 +7,13 @@ import { register } from "../../action";
 import { INITIAL_STATE_REGISTER_FORM } from "@/constants/auth-constants";
 import { startTransition, useActionState, useEffect } from "react";
 import { toast } from "sonner";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { BadgeDollarSign, Loader2 } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import FormInput from "@/components/common/form-input";
 import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
+import Link from "next/link";
 
 export default function RegisterForm() {
     const form = useForm<RegisterSchema>({
@@ -59,7 +60,7 @@ export default function RegisterForm() {
                 </CardTitle>
                 <Separator />
                 <CardTitle className="font-bebas-neue mt-6 text-xl">Register</CardTitle>
-                <CardDescription className="font-bebas-neue">
+                <CardDescription className="font-bebas-neue mb-3">
                     Please enter your email and password to register for an account.
                 </CardDescription>
             </CardHeader>
@@ -94,7 +95,7 @@ export default function RegisterForm() {
                             label="* Confirm Password"
                             placeholder="Please Enter Your Confirm Password"
                         />
-                        <div className="flex flex-col gap-10">
+                        <div className="flex flex-col gap-10 mt-9">
                             <Button type="submit"
                                 className=" text-center col-span-2 dark:hover:bg-teal-500 hover:bg-teal-500 ">
                                 {isPendingRegister ? <Loader2 className="animate-spin" /> : "Register"}
@@ -103,6 +104,12 @@ export default function RegisterForm() {
                     </form>
                 </Form>
             </CardContent>
+            <Separator />
+            <CardFooter className="justify-center">
+                <p className="text-center font-iosevka-charon text-sm">
+                    Already have an account? <Link href="/login" className="hover:underline hover:text-teal-500 text-bold">Login</Link>
+                </p>
+            </CardFooter>
         </Card>
     )
 }

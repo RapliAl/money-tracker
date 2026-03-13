@@ -1,4 +1,4 @@
-import { TrendingDown, TrendingUp, ChartNoAxesCombined } from "lucide-react"
+import { ChartNoAxesCombined, Wallet, ArrowRightLeft } from "lucide-react"
 
 export const SIDEBAR_LIST = [
     {
@@ -7,15 +7,15 @@ export const SIDEBAR_LIST = [
         icon: ChartNoAxesCombined,
     },
     {
-        title: "Pengeluaran",
-        href: "/dashboard/pengeluaran",
-        icon: TrendingDown,
+        title: "Transaction",
+        href: "/dashboard/transaction",
+        icon: ArrowRightLeft,
         color: "red"
     },
     {
-        title: "Pemasukan",
-        href: "/dashboard/pemasukan",
-        icon: TrendingUp,
+        title: "Wallet",
+        href: "/dashboard/wallet",
+        icon: Wallet,
         color: "green"
     },
 ]
