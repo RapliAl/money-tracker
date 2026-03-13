@@ -50,10 +50,10 @@ export default function RegisterForm() {
     }, [registerState])
 
     return (
-        <Card>
+        <Card className="bg-deep-green">
             <CardHeader>
                 <CardTitle className="text-center font-bold text-3xl">
-                    <div className="flex justify-center items-center gap-2 font-bebas-neue">
+                    <div className="flex justify-center items-center gap-2 font-bebas-neue text-[#F7E7CE]">
                         <BadgeDollarSign className="size-10 flex" />
                         Money Tracker
                     </div>
@@ -97,7 +97,7 @@ export default function RegisterForm() {
                         />
                         <div className="flex flex-col gap-10 mt-9">
                             <Button type="submit"
-                                className=" text-center col-span-2 dark:hover:bg-teal-500 hover:bg-teal-500 ">
+                                className=" text-center col-span-2 dark:hover:bg-[#F7E7CE] hover:bg-[#F7E7CE] ">
                                 {isPendingRegister ? <Loader2 className="animate-spin" /> : "Register"}
                             </Button>
                         </div>
